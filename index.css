@@ -460,6 +460,13 @@ td img
    left: 150px; 
    border-radius: 5px; 
    color: white; 
+   border-width: 2px;
+   border-style: outset;
+   border-color: buttonborder;
+   border-image: initial;
+   margin: 0;
+   padding: 0;
+   width: 60px;
    background-color: rgba(0, 0, 0, 0.381);
 }
 .table_mo :hover
