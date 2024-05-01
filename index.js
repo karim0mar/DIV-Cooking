@@ -221,6 +221,7 @@ window.onload = function() {
 }
 
 /* about us Page */
+
 /*  Teams Member Data->       */
 const teamMembers = [
   { name: "Karim Omar", imgURL: "./img/profiles/karim-omar.jpg" , id:20230415},
@@ -274,6 +275,7 @@ const OurMembersProcesses = class {
       return DIV;
   }
   /*  Create table item for name->       */
+    
   get TableNames(){
     let td = document.createElement("td");
     td.textContent = this.Name;
@@ -337,6 +339,7 @@ darkModeBtn.addEventListener('click', function(){
 });
 
 /* Append the button to the body */ 
+    
 document.body.appendChild(darkModeBtn);
 
 /* Div that contains each member card */
@@ -351,6 +354,7 @@ let person = new OurMembersProcesses(member.name, member.imgURL);
 ABoutUsDiv.appendChild(person.ImageDiv);
 });
 /* add div to the body */
+    
 bdy.appendChild(ABoutUsDiv);
 
 /*create TableBtn to switch betwen Images and Tables and set his styles, hover, onclick*/
@@ -388,6 +392,7 @@ TableBtn.addEventListener("click", function() {
   flag = 1;
 }
 });
+    
 /* create div to be container for the table*/
 
 TableDiv = document.createElement("div");
@@ -409,6 +414,7 @@ table.addEventListener("mouseenter", () => {
 table.addEventListener("mouseleave", () => {
   table.style.transform = "scale(1)";
 });
+    
 /* creating table header (NAME , ID )*/
 
 let header = document.createElement("tr");
@@ -432,12 +438,11 @@ table.appendChild(header);
 teamMembers.forEach(member => {
   /* creating row ex. Karim Omar  |  20230415 */
   let fullRow = document.createElement("tr");
-  let person = new OurMembersProcesses(member.name,member.imgURL, member.id);
-  fullRow.appendChild(person.TableNames); // append the name to the row
-  fullRow.appendChild(person.TableIDs); // append the ID to the row
+  let Tmemper = new OurMembersProcesses(member.name,member.imgURL, member.id);
+  fullRow.appendChild(Tmemper.TableNames); // append the name to the row
+  fullRow.appendChild(Tmemper.TableIDs); // append the ID to the row
   table.appendChild(fullRow); //append the row to the table
   });
-
 
 // Add search bar !!
 const searchInput = document.createElement('input');
@@ -448,17 +453,17 @@ searchInput.style = 'width: 450px; margin-bottom: 20px; padding: 8px; border-rad
 TableDiv.appendChild(searchInput);
 
 // Add event listener for search input
+    
 searchInput.addEventListener('input', function() {
-    const searchTerm = searchInput.value.trim().toLowerCase();
+    const searchWord = searchInput.value.toLowerCase();
     const rows = table.querySelectorAll('tr');
-
     rows.forEach(row => {
         const nameColumn = row.querySelector('td:nth-child(1)');
         const idColumn = row.querySelector('td:nth-child(2)');
         if (nameColumn || idColumn) {
             const name = nameColumn.textContent.toLowerCase();
-            const id = idColumn.textContent.toLowerCase();
-            if (name.includes(searchTerm) || id.includes(searchTerm)) {
+            const id = idColumn.textContent;
+            if (name.includes(searchWord) || id.includes(searchWord)) {
                 row.style.display = ''; // Show the row
             } else {
                 row.style.display = 'none'; // Hide the row
@@ -467,9 +472,12 @@ searchInput.addEventListener('input', function() {
     });
 });
 /* add the full table to the div */
+    
 TableDiv.appendChild(table);
+    
 /* add the switch button to the body*/
+    
 bdy.appendChild(TableBtn);  
 
 }
-/* ennd karim*/   
+/* ennnnnd karim*/   
