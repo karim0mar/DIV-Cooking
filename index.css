@@ -2172,6 +2172,8 @@ textarea {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  position: absolute;
+  top: 100px;
 }
 
 
@@ -2269,7 +2271,11 @@ border-color: aliceblue;
   justify-content:space-between;
 }
 .ab_contant img{
+
+  margin-top: 40px;
   width: 450px;
+  height: fit-content;
+
 }
 .ab_contant p{
   line-height: 1.6;
@@ -2285,6 +2291,12 @@ border-color: aliceblue;
 .formkm #radiokm p {
   padding-bottom:10px ;
   color: #383848;
+}
+.formkm #radiokm input {
+  padding: 0px;
+  margin: 0px;
+  width: fit-content;
+  display: inline;
 }
 .formkm #namekm input {
   margin-top:10px ;
