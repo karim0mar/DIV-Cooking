@@ -1,6 +1,3 @@
-function is_not_null(element) {
-  return element != null && element != undefined;
-}
 /*Start By Mustafa*/
 
 function Done ()
@@ -101,6 +98,7 @@ function fun (){
 document.addEventListener("DOMContentLoaded", function() {
   const toggleButton = document.getElementById("toggleButton");
   const body = document.body;
+  if(is_not_null(toggleButton))
 
   toggleButton.addEventListener("click", function() {
       body.classList.toggle("night-mode");
@@ -177,6 +175,13 @@ for (let index = 0; index < 6; index++) {
 
 
 /*start karim > */
+
+function is_not_null(element) {
+  return element != null && element != undefined;
+}
+
+
+
 function feedback() {
   /*
   *{
