@@ -98,6 +98,14 @@ function fun (){
     alert("Hello " + name + "\n How are you");
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById("toggleButton");
+  const body = document.body;
+
+  toggleButton.addEventListener("click", function() {
+      body.classList.toggle("night-mode");
+  });
+});
 
 /*End By KM */
 
