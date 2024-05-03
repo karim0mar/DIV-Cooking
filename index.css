@@ -288,8 +288,16 @@ text-align: center;
 {
   color: black;
 }
-
-
+.table_mark td:hover{
+    background-color: #504d4d;
+}
+.ifrm{
+  width: 55%;
+  margin: auto;
+}
+.ifrm h1{
+  margin-left:300px;
+}
 
 #dayti {
 background-color: rgba(0, 0, 0, 0.57);
