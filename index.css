@@ -2379,9 +2379,9 @@ flex-wrap: wrap;
 .container-karim {
     width:500px;
     height: 70%;
+    padding: 15px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     row-gap: 10px;
     justify-content: center;
